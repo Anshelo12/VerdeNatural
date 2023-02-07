@@ -1,0 +1,66 @@
+{% extends './base.html' %}
+{% block titulo %}
+<title>Contactanos</title>
+{% endblock %}
+{% block contenido %}
+<div class="container">
+    <div class="sticky-container">
+        <ul class="sticky">
+            <li>
+                <img src="{{url_for('static',filename='img/facebook.png')}}" width="32" height="32">
+                <p><a href="https://www.facebook.com/Verde-Natural-104743242304713/" target="_blank">Sigueno
+                        en:<br>Facebook</a></p>
+            </li>
+            <li>
+                <img src="{{url_for('static',filename='img/twitter.png')}}" width="32" height="32">
+                <p><a href="https://twitter.com/Verdenatural61" target="_blank">Siguenos en:<br>Twitter</a></p>
+            </li>
+            <li>
+                <img src="{{url_for('static',filename='img/instagram.png')}}" width="32" height="32">
+                <p><a href="https://www.instagram.com/tienda_online_verde_natural/" target="_blank">Siguenos
+                        en:<br>Instagram</a>
+                </p>
+            </li>
+            <li>
+                <img src="{{url_for('static',filename='img/whatsapp.png')}}" width="32" height="32">
+                <p><a href="https://web.whatsapp.com/" target="_blank">Escribenos en:<br>whatsapp</a>
+                </p>
+            </li>
+        </ul>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-7">
+            <h3 class="ubi"><strong> UBICACIÓN</strong></h3>
+            <br>
+
+            <div class="mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255346.97767887736!2d-78.58844283701023!3d-0.1893785748541752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d5976e36dac53b%3A0x3def7e90c9b1a3af!2sZona%20Garden%20%7C%20Centro%20de%20jardiner%C3%ADa%20%7C%20Dise%C3%B1o%20%7C%20Mantenimiento%20%7C%20Tienda%20%7C%20Quito!5e0!3m2!1ses!2sec!4v1657257982964!5m2!1ses!2sec"
+                    width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+
+                      
+
+        <center>
+            <h3 class="contactanos"><strong> CONTACTANOS</strong></h3>
+            <br>
+            <div class="row info">
+
+                <h2></h2>
+                <p>INFORMACION: VERDE NATURAL</p>
+                <p>CORREO: verdenatural157@gmail.com</p>
+                <p>TELEFONO: 029856784</p>
+                <p>CELULAR: 0995953694</p>
+                <p>HORARIO DE ATENCION: DE 8H00 A 18H00</p>
+            </div>
+        </center>
+
+    </div>
+    
+</div>
+{% endblock %}

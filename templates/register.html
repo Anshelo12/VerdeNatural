@@ -1,0 +1,66 @@
+{% extends './base.html' %}
+{% block titulo %}
+<title>Registro</title>
+{% endblock %}
+{% block contenido %}
+
+    <div>
+    <div class="container1">
+      <div class="row">
+        <center>
+            <div class="col col-md-6">
+                <div class="row">
+    <div class="card formulario">
+    <center>
+        <div class="card-header">
+            <h3 class="iniciar">Registrate</h3>
+        </div>
+        <br>
+        <form action="{{ url_for('register') }}" method="post" autocomplete="off"> 
+        <div class="mb-3">    
+            <label for="fullname" class="cols-sm-2 control-label">Nombre</label>
+                  <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+            <input type="text" class="form-control" name="fullname" id="fullname"  placeholder="Ingresa un Nombre" required/>
+        </div>
+        <div class="mb-3"> 
+          <label for="email" class="cols-sm-2 control-label">Correo</label>      
+            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+            <input type="text" class="form-control" name="email" id="email"  placeholder="Ingresa un Correo" required/>    
+        </div>
+        <div class="mb-3">
+          <label for="username" class="cols-sm-2 control-label">Usuario</label>
+        
+            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+            <input type="text" class="form-control" name="username" id="username" placeholder="Ingresa un Usuario" required>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="cols-sm-2 control-label">Contraseña</label>
+           <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+            <input type="password" class="form-control" name="password" placeholder="Ingresa una Contraseña" id="password" required/>
+        </div>    
+           {% with messages = get_flashed_messages()  %}
+           {% if messages %}
+           {% for message in messages %}
+           <div  role="alert">
+             {{ message }}
+             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+               <span aria-hidden="true">×</span>
+             </button>
+           </div>
+           {% endfor %}
+           {% endif %}
+           {% endwith %}
+          <input type="submit" value="Registrate" class="btn btn-primary" name="">
+          <p style="padding:10px;">
+               <a href="{{ url_for('login') }}" class="btn btn-secondary">Login</a>
+          </p>      
+        </form>
+    </center>    
+    </div>
+    </div> 
+            </div>
+        </center>
+      </div>   
+    </div>
+    
+{% endblock %}

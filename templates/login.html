@@ -1,0 +1,56 @@
+{% extends './base.html' %}
+{% block titulo %}
+<title>Login</title>
+{% endblock %}
+{% block contenido %}
+
+    <div class="container1">
+      <div class="row">
+        <center>
+            <div class="col col-md-6">
+                <div class="row">
+      <div class="card formulario">
+        <center>
+          <div class="card-header">
+            <h3 class="iniciar">Iniciar Sesion</h3>
+          </div>
+          <br>
+          <form class="form-group" action="{{ url_for('login') }}" method="post">
+            <div class="mb-3">
+              <label>Usuario</label>
+              <input type="text" class="form-control" name="username" placeholder="Ingresa tu Usuario" id="username" required>
+            </div>
+            <div class="mb-3">  
+              <label>Contraseña</label>
+              <input type="password" class="form-control" name="password" placeholder="Ingresa tu Contraseña" id="password" required>
+            </div>
+            <div class="mb-3">
+              <input type="checkbox" value="checked"><b> Recuerdame</b> <br>
+            </div>
+            <div class="mb-3">
+              <input class="btn btn-primary" type="submit" value="Ingresar">
+            </div>  
+          </form>    
+              {% with messages = get_flashed_messages()  %}
+              {% if messages %}
+              {% for message in messages %}
+              <div  role="alert">
+                {{ message }}
+                <button type="button"  data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <br>
+              {% endfor %}
+              {% endif %}
+              {% endwith %}   
+              <p>No tienes una cuenta <a href="{{ url_for('register') }}">Registrate Aqui</a></p>
+              <a class="btn btn-primary" href="{{ url_for('index') }}">Atras</a> 
+              
+        </center>      
+      </div>
+      </div>
+    </center>
+    </div> 
+    </div>
+{% endblock %}

@@ -1,0 +1,83 @@
+{% extends './base.html' %}
+{% block titulo %}
+<title>Servicios</title>
+{% endblock %}
+{% block contenido %}
+<div class="container">
+    <div class="sticky-container">
+        <ul class="sticky">
+            <li>
+                <img src="{{url_for('static',filename='img/facebook.png')}}" width="32" height="32">
+                <p><a href="https://www.facebook.com/URBAN-SHOP-101749835935934/" target="_blank">Sigueno
+                        en:<br>Facebook</a></p>
+            </li>
+            <li>
+                <img src="{{url_for('static',filename='img/twitter.png')}}" width="32" height="32">
+                <p><a href="https://twitter.com/noprog" target="_blank">Siguenos en:<br>Twitter</a></p>
+            </li>
+            <li>
+                <img src="{{url_for('static',filename='img/instagram.png')}}" width="32" height="32">
+                <p><a href="https://plus.google.com/programacionnet" target="_blank">Siguenos en:<br>Instagram</a>
+                </p>
+            </li>
+            <li>
+                <img src="{{url_for('static',filename='img/whatsapp.png')}}" width="32" height="32">
+                <p><a href="http://www.youtube.com/programacionnet" target="_blank">Escribenos en:<br>whatsapp</a>
+                </p>
+            </li>
+        </ul>
+    </div>
+    <br>
+    <center>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <h3 class="item">SERVICIOS</h3>
+
+                    <div class="col-sm-6">
+                        <br>
+                        <div class="card">
+                            <div class="card-header servicios ">
+                                Asesoramiento Personalizado
+                            </div>
+                            <center>
+                                <div class="card-body">
+                                    <img src="{{url_for('static',filename='img/atencion.jpeg')}}" alt="" width="200px" height="200px">
+                                    <footer><em><strong>En Verde Natural contamos con personal especializado para
+                                                tratar cualquiera de sus dudas de forma gratuita, planificar su
+                                                compra, para que su visita en nuestra tienda sea
+                                                satisfactoria</strong></em>
+                                    </footer>
+                                    
+                            </center>
+                        </div>
+                    </div>
+                   
+                    <div class="col-sm-6">
+                        <br>
+                        <div class="card">
+                            <div class="card-header servicios">
+                                Envio a Domicilio
+                            </div>
+                            <center>
+                                <div class="card-body">
+                                    <img src="{{url_for('static',filename='img/envio.jpeg')}}" alt="" width="200px" height="200px">
+                                    <footer><em><strong>Ofrecemos servicio a domicilio dentro y fuera de la ciudad
+                                                
+                                                    <li>Pago dentro: Contraentrea</li>
+                                                    <li>Pago fuera: Servipago (Tarjeta)</li>
+                                                    
+                                            </strong></em></footer>
+                                    
+                                    
+                                </div>
+                            </center>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+    </center>
+    
+</div>
+{% endblock %}
